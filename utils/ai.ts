@@ -7,6 +7,7 @@ import { PromptTemplate } from '@langchain/core/prompts';
 import { Pinecone } from '@pinecone-database/pinecone';
 import { Document } from 'langchain/document';
 import dotenv from 'dotenv';
+import { getUserByClerkId } from './auth';
 
 dotenv.config();
 
@@ -63,22 +64,24 @@ export const analyse = async (content: string) => {
   }
 };
 
-const getVectorDbIndex = () => {
+const getVectorDbIndex = (userId: string) => {
   const pc = new Pinecone({ apiKey: process.env.PINECONE_SECRET as string });
   const indexName = 'mood-journal';
-  const index = pc.index(indexName).namespace('mood-journal-namespace');
+  const index = pc.index(indexName).namespace(`mood-journal-namespace-${userId}`);
   return index;
 };
 
 export const addToVectorDb = async (entry) => {
-  const index = getVectorDbIndex();
+  const user = await getUserByClerkId();
+  const index = getVectorDbIndex(user.id);
   const text = `Entry is created at date: ${entry.createdAt} and content of entry is: ${entry.content}`;
   await index.upsertRecords([{ _id: entry.id, text: text }]);
   await new Promise((resolve) => setTimeout(resolve, 3000));
 };
 
 export const semanticSearchAndAnswer = async (query: string) => {
-  const index = getVectorDbIndex();
+  const user = await getUserByClerkId();
+  const index = getVectorDbIndex(user.id);
   const relevantDocs = await index.searchRecords({
     query: {
       topK: 7,
