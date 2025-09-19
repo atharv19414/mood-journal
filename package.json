@@ -6,22 +6,40 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "vitest"
+
   },
   "dependencies": {
+    "@clerk/nextjs": "^6.31.10",
+    "@langchain/core": "^0.3.75",
+    "@langchain/openai": "^0.6.11",
+    "@pinecone-database/pinecone": "^6.1.2",
+    "@prisma/client": "^6.16.0",
+    "dotenv": "^17.2.2",
+    "langchain": "^0.3.33",
+    "next": "15.5.3",
     "react": "19.1.0",
+    "react-autosave": "^0.5.0",
     "react-dom": "19.1.0",
-    "next": "15.5.3"
+    "recharts": "^3.2.0",
+    "zod": "^3.25.76"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@testing-library/jest-dom": "^6.8.0",
+    "@testing-library/react": "^16.3.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
+    "@vitejs/plugin-react-swc": "^4.0.1",
     "eslint": "^9",
     "eslint-config-next": "15.5.3",
-    "@eslint/eslintrc": "^3"
+    "jsdom": "^27.0.0",
+    "prisma": "^6.16.0",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vitest": "^3.2.4"
   }
 }
