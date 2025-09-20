@@ -1,7 +1,7 @@
 🌙 Mood Journal
 
 Mood Journal is an AI-powered journaling app built with Next.js. It helps you track your mood, analyze sentiment, and reflect on your personal growth over time. Beyond just storing your entries, Mood Journal uses LLMs, prompt engineering, vector databases, and semantic search to provide intelligent insights. You can even ask questions about your past journal entries and receive contextual answers.
-/n Website is live at: https://mood-journal-liard.vercel.app/
+# Website is live at: https://mood-journal-liard.vercel.app/
 
 ✨ Features
 
