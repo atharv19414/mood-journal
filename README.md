@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🌙 Mood Journal
 
-## Getting Started
+Mood Journal is an AI-powered journaling app built with Next.js. It helps you track your mood, analyze sentiment, and reflect on your personal growth over time. Beyond just storing your entries, Mood Journal uses LLMs, prompt engineering, vector databases, and semantic search to provide intelligent insights. You can even ask questions about your past journal entries and receive contextual answers.
+# Website is live at: https://mood-journal-liard.vercel.app/
 
-First, run the development server:
+✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+📝 Smart Journaling – Write your daily thoughts and reflections.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+😊 Mood Tracking – Automatically detects your mood with sentiment analysis.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+📊 Sentiment Score – Visualizes your mood trends with charts.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🔍 Semantic Search – Search journal entries with vector embeddings instead of plain keywords.
 
-## Learn More
+🤖 AI-Powered Q&A – Ask questions about your past entries and get meaningful insights.
 
-To learn more about Next.js, take a look at the following resources:
+🔐 Secure Authentication – Powered by Clerk
+.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🎨 Modern UI – Clean, minimal interface built with Tailwind CSS.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🛠️ Tech Stack
 
-## Deploy on Vercel
+Frontend
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Next.js 15
+ – Fullstack React framework
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+React 19
+ – UI library
+
+Tailwind CSS
+ – Styling
+
+Recharts
+ – Mood trend visualizations
+
+Backend & AI
+
+LangChain
+ – LLM orchestration & prompt engineering
+
+OpenAI
+ – LLM provider
+
+Pinecone
+ – Vector database for semantic search
+
+Prisma
+ – Database ORM
+
+PostgreSQL
+ (recommended DB)
+
+Dev Tools
+
+TypeScript
+ – Type safety
+
+Vitest
+ – Testing
+
+ESLint
+ – Linting & code quality
